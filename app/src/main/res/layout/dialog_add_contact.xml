@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/newContactTextView"
+            android:text="New contact:"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"/>
+    <EditText
+            android:id="@+id/ContactNameEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Name"
+            android:textSize="20sp"
+            android:ems="10"
+            app:layout_constraintTop_toBottomOf="@+id/newContactTextView"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+    <EditText
+            android:id="@+id/PhoneNumberEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:hint="Phone number"
+            android:textSize="20sp"
+            android:ems="10"
+            app:layout_constraintTop_toBottomOf="@+id/ContactNameEditText"
+            app:layout_constraintEnd_toEndOf="@+id/ContactNameEditText"
+            app:layout_constraintStart_toStartOf="@+id/ContactNameEditText"
+            android:layout_marginTop="10dp"/>
+    <CheckBox
+            android:id="@+id/checkBoxFavourites"
+            android:text="Add to favourites"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/PhoneNumberEditText"
+            app:layout_constraintStart_toStartOf="@+id/PhoneNumberEditText"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/PhoneNumberEditText"/>
+    <Button
+            android:id="@+id/buttonCancel"
+            android:text="Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxFavourites"
+            app:layout_constraintStart_toStartOf="@+id/checkBoxFavourites"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="40dp"/>
+    <Button
+            android:id="@+id/buttonConfirm"
+            android:text="OK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxFavourites"
+            app:layout_constraintEnd_toEndOf="@+id/checkBoxFavourites"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
